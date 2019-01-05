@@ -22,11 +22,11 @@
    canvas.addEventListener('mousemove', function(evt) {
       var ctx = canvas.getContext("2d");
       var mousePos = getMousePos(canvas, evt);
-      <!-- 
-      var img = document.getElementById("scream");
-      ctx.fillStyle = "#FF0000";
-      ctx.drawImage(img, mousePos.x, mousePos.y);
-      -->
+      //<!-- 
+      //var img = document.getElementById("scream");
+      //ctx.fillStyle = "#FF0000";
+      //ctx.drawImage(img, mousePos.x, mousePos.y);
+      //-->
          ctx.beginPath();
       ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
       ctx.fillStyle = 'green';
