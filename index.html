@@ -6,7 +6,7 @@
       <title>FF4 Magic Damage Calc</title>
    </head>
    <body>
-      <!-- <img id="scream" width="220" height="277" src="pic_the_scream.jpg" alt="The Scream">   -->
+    <img id="piece" width="10" height="10" src="gammonPiece.png" alt="gammonPiece">   -->
   <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
 </body>
 </html>
@@ -22,16 +22,13 @@
    canvas.addEventListener('mousemove', function(evt) {
       var ctx = canvas.getContext("2d");
       var mousePos = getMousePos(canvas, evt);
-      //<!-- 
-      //var img = document.getElementById("scream");
-      //ctx.fillStyle = "#FF0000";
-      //ctx.drawImage(img, mousePos.x, mousePos.y);
-      //-->
       DrawBackground(ctx)
-         ctx.beginPath();
-      ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
-      ctx.fillStyle = 'green';
-      ctx.fill();
+      var img = document.getElementById("piece");
+      ctx.drawImage(img, mousePos.x, mousePos.y);
+      //ctx.beginPath();
+      //ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
+      //ctx.fillStyle = 'green';
+      //ctx.fill();
         //writeMessage(canvas, message);
       }, false);
    function DrawBackground(ctx){
