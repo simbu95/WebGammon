@@ -15,15 +15,16 @@
   var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#FF0000";
   ctx.fillRect(0, 0, 150, 75);
-   document.createElement("img",src="gammonPiece.png",id="piece")
+   var img1 = new Image(); // Image constructor
+   img1.src = 'image1.png';
+   img1.alt = 'alt';
    
    
    canvas.addEventListener('mousemove', function(evt) {
       var ctx = canvas.getContext("2d");
       var mousePos = getMousePos(canvas, evt);
       DrawBackground(ctx)
-      var img = document.getElementById("piece")
-      ctx.drawImage(img, mousePos.x-10, mousePos.y-10,20,20);
+      ctx.drawImage(img1, mousePos.x-10, mousePos.y-10,20,20);
       //ctx.beginPath();
       //ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
       //ctx.fillStyle = 'green';
