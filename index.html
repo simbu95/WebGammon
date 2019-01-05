@@ -17,7 +17,8 @@
   ctx.fillStyle = "#FF0000";
   ctx.fillRect(0, 0, 150, 75);
    
-   ctx.addEventListener('mousemove', function(evt) {
+   canvas.addEventListener('mousemove', function(evt) {
+      var ctx = canvas.getContext("2d");
       var mousePos = getMousePos(canvas, evt);
       <!-- 
       var img = document.getElementById("scream");
