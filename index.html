@@ -5,11 +5,14 @@
       <meta charset="utf-8" />
       <title>FF4 Magic Damage Calc</title>
    </head>
-   <img id="piece" src="gammonPiece.png" alt="gammonPiece">
    <body>
       <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
    </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"> </script>
 
 <script>
   var canvas = document.getElementById("myCanvas");
@@ -23,7 +26,7 @@
       var ctx = canvas.getContext("2d");
       var mousePos = getMousePos(canvas, evt);
       DrawBackground(ctx)
-      var img = document.getElementById("piece");
+      var img = $(<img />).attr('src','gammonPiece.png');
       ctx.drawImage(img, mousePos.x-10, mousePos.y-10,20,20);
       //ctx.beginPath();
       //ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
