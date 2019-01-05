@@ -10,21 +10,19 @@
    </body>
 </html>
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" </script>
-
 <script>
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#FF0000";
   ctx.fillRect(0, 0, 150, 75);
-   
+   document.createElement("img",src="gammonPiece.png",id="piece")
    
    
    canvas.addEventListener('mousemove', function(evt) {
       var ctx = canvas.getContext("2d");
       var mousePos = getMousePos(canvas, evt);
       DrawBackground(ctx)
-      var img = $(<img />).attr('src','gammonPiece.png');
+      var img = document.getElementById("piece")
       ctx.drawImage(img, mousePos.x-10, mousePos.y-10,20,20);
       //ctx.beginPath();
       //ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
