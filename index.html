@@ -6,6 +6,7 @@
       <title>FF4 Magic Damage Calc</title>
    </head>
    <body>
+      <!-- <img id="scream" width="220" height="277" src="pic_the_scream.jpg" alt="The Scream">   -->
   <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
 </body>
 </html>
@@ -15,4 +16,18 @@
   var ctx = canvas.getContext("2d");
   ctx.fillStyle = "#FF0000";
   ctx.fillRect(0, 0, 150, 75);
+   
+   ctx.addEventListener('mousemove', function(evt) {
+      var mousePos = getMousePos(canvas, evt);
+      <!-- 
+      var img = document.getElementById("scream");
+      ctx.fillStyle = "#FF0000";
+      ctx.drawImage(img, mousePos.x, mousePos.y);
+      -->
+         ctx.beginPath();
+      ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
+      ctx.fillStyle = 'green';
+      ctx.fill();
+        writeMessage(canvas, message);
+      }, false);
 </script>
