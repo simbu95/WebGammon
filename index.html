@@ -27,12 +27,17 @@
       //ctx.fillStyle = "#FF0000";
       //ctx.drawImage(img, mousePos.x, mousePos.y);
       //-->
+      DrawBackground(ctx)
          ctx.beginPath();
       ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
       ctx.fillStyle = 'green';
       ctx.fill();
-        writeMessage(canvas, message);
+        //writeMessage(canvas, message);
       }, false);
+   function DrawBackground(ctx){
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, 150, 75);
+   };
    function getMousePos(canvas, evt) {
         var rect = canvas.getBoundingClientRect();
         return {
