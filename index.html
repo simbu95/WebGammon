@@ -5,10 +5,10 @@
       <meta charset="utf-8" />
       <title>FF4 Magic Damage Calc</title>
    </head>
+   <img id="piece" src="gammonPiece.png" alt="gammonPiece">
    <body>
-    <img id="piece" src="gammonPiece.png" alt="gammonPiece">   -->
-  <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
-</body>
+      <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
+   </body>
 </html>
 
 <script>
@@ -24,7 +24,7 @@
       var mousePos = getMousePos(canvas, evt);
       DrawBackground(ctx)
       var img = document.getElementById("piece");
-      ctx.drawImage(img, mousePos.x-5, mousePos.y-5,10,10);
+      ctx.drawImage(img, mousePos.x-10, mousePos.y-10,20,20);
       //ctx.beginPath();
       //ctx.arc(mousePos.x, mousePos.y, 10, 0, 2 * Math.PI, false);
       //ctx.fillStyle = 'green';
@@ -32,6 +32,8 @@
         //writeMessage(canvas, message);
       }, false);
    function DrawBackground(ctx){
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height)
       ctx.fillStyle = "#FF0000";
       ctx.fillRect(0, 0, 150, 75);
    };
